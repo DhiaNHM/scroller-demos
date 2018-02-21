@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+
+    <script src="bodymovin/bodymovin.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+
+        body {
+            margin: 0 !important;
+        }
+        #container {
+            background-color: red;
+            transition: all 1s linear ;
+            width: 100vw;
+            height: 100vh;
+        }
+
+         #console {
+            position: absolute;
+            top: 200px;
+            left: 150px;
+             opacity: 1;
+             color: white;
+             transition: opacity 1s linear;
+             font-size: 25px;
+             z-index: 100;
+        }
+
+         p.hide {
+             opacity: 0;
+             transition: opacity 1s linear;
+         }
+
+         .stage {
+             top: -30px;
+             font-size: 25px;
+             font-weight: bold;
+             color: black;
+             margin: 0 auto 0 auto;
+             position:absolute;
+             left: 48vw;
+             width: 100vw;
+             z-index: 100;
+             opacity: 1;
+             transition: all 1s linear;
+         }
+
+         .stage.show {
+             opacity: 1;
+         }
+
+
+        #thing1Text {
+            font-size:18px;
+            color: #ffffff;
+            padding:20px;
+        }
+        #thing1 {
+            top: 15%;
+            display: inline;
+            position:absolute;
+            height: 80%;
+            width: 80%;
+        }
+        #thing2 {
+            top: 15%;
+            display:inline;
+            position:absolute;
+
+            height: 80%;
+            width: 80%;
+        }
+        #thing3 {
+            top: 15%;
+            display:inline;
+            position:absolute;
+
+            height: 80%;
+            width: 80%;
+        }
+
+        .bodymovin  {
+            width:100vw;
+            height:80%;
+            background-color:#333;
+         }
+
+        .hide {
+           visibility: hidden;
+        }
+    </style>
+
+
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="container">
+    <p id="console"></p>
+<div id="thing1"><div id="bodymovin1" class="bodymovin"></div></div>
+<div id="thing2" class="hide"><div id="bodymovin2" class="bodymovin"></div></div>
+<div  id="thing3" class="hide"><div id="bodymovin3" class="bodymovin" ></div></div>
+
+</div>
+
+<script>
+       //bodymovin stuff
+       var anim1Data = {
+           wrapper: document.getElementById('bodymovin1'),
+           animType: 'html',
+           loop: false,
+           prerender: true,
+           autoplay: false,
+           path: 'bodymovin/data.json',
+           rendererSettings: {preserveAspectRatio: 'none'},
+           name: 'anim1'  //only works for svg render
+       };
+
+       var anim2Data = {
+           wrapper: document.getElementById('bodymovin2'),
+           animType: 'html',
+           loop: false,
+           prerender: true,
+           autoplay: false,
+           path: 'bodymovin/data.json',
+           rendererSettings: {preserveAspectRatio: 'none'},
+           name: 'anim2'   //only works for svg render
+       };
+
+       var anim3Data = {
+           wrapper: document.getElementById('bodymovin3'),
+           animType: 'html',
+           loop: false,
+           prerender: false,
+           autoplay: false,
+           path: 'bodymovin/data.json',
+           rendererSettings: {preserveAspectRatio: 'none'},
+           name: 'anim3'  //only works for svg render
+       };
+
+
+       var anim1 = bodymovin.loadAnimation(anim1Data);
+       container1 = document.getElementById('bodymovin1');
+       contentid1 = document.getElementById('thing1');
+       //window.onresize = anim1.resize.bind(anim1);
+
+       var anim2 = bodymovin.loadAnimation(anim2Data);
+       container2 = document.getElementById('bodymovin2');
+       contentid2 = document.getElementById('thing2');
+       //window.onresize = anim2.resize.bind(anim2);
+
+       var anim3 = bodymovin.loadAnimation(anim3Data);
+       container3 = document.getElementById('bodymovin3');
+       contentid3 = document.getElementById('thing3');
+       //window.onresize = anim3.resize.bind(anim3);
+
+
+       function animLoaded() {
+           if (!anim3.isLoaded) {
+               setTimeout("animLoaded();", 1000);
+               return;
+           } else {
+               attachScroll(anim1, contentid1, 50);
+           }
+        }
+
+  function attachScroll(anim, contentid, speed) {
+      attachEvents(contentid);
+
+           anim.addEventListener("complete", function completeHandler()
+           {
+               anim.removeEventListener("complete", completeHandler);
+               console.log('complete:' + anim.name);
+               if(anim.name === 'anim1')
+                {
+                   $('#thing1').toggleClass('hide');
+                   $('#thing2').toggleClass('hide');
+                   val=0;
+                   detachEvents(contentid1);
+                    $('#container').css('background-color', 'yellow');
+
+                   attachScroll(anim2, contentid2, speed);
+                }
+               else if (anim.name === 'anim2') {
+                   $('#thing2').toggleClass('hide');
+                   $('#thing3').toggleClass('hide');
+                   val=0;
+                   detachEvents(contentid2);
+                   $('#container').css('background-color', 'green');
+
+                   //attachScroll(anim3, contentid3, speed);
+                   anim3.play();
+               }
+           });
+
+           // function for certain frame
+           anim.addEventListener('enterFrame',enterframe);
+           function enterframe() {
+               console.log('In Frame');
+               $('#console').html(anim.name + ' : ' + anim.currentFrame + "/" + anim.totalFrames);
+           }
+           var val = 0,
+            totalDuration = anim.totalFrames / anim.frameRate * 1000;
+           console.log('total duration:' + totalDuration);
+
+
+      function attachEvents(contentid) {
+          if (contentid.addEventListener) {
+              contentid.addEventListener("mousewheel", MouseWheelHandler, false);
+              contentid.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+          } else {
+              contentid.attachEvent("onmousewheel", MouseWheelHandler);
+          }
+      }
+
+      function detachEvents(contentid) {
+          if (contentid.addEventListener) {
+              contentid.removeEventListener("mousewheel", MouseWheelHandler, false);
+              contentid.removeEventListener("DOMMouseScroll", MouseWheelHandler, false);
+          } else {
+              contentid.detachEvent("onmousewheel", MouseWheelHandler);
+          }
+      }
+
+
+
+
+           function MouseWheelHandler(e) {
+               var e = window.event || e;
+               var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+               if (delta < 0) {
+                   if (val < totalDuration) {
+                       val += (Math.abs(delta)) * speed;
+                   }
+               } else {
+                   if (val > 0) {
+                       val -= (Math.abs(delta)) * speed;
+                   }
+               }
+               anim.goToAndStop(val * 4);  //sensitivity factor
+           }
+       }
+       animLoaded();
+
+       $(window).scroll(function () {
+           // calculate the percentage the user has scrolled down the page
+           var scrollPercent = 100 * $(window).scrollTop() / ($(document).height() - $(window).height());
+           console.log(scrollPercent)
+   });
+
+    
+</script>
+</body>
+</html>
