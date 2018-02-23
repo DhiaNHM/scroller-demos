@@ -2,12 +2,11 @@
 <html>
 <head lang="en">
 
-
     <script src="bodymovin/bodymovin.js"></script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style>
+    <script src="JS/jquery.mousewheel.min.js"></script>
 
+    <style>
         body {
             margin: 0 !important;
         }
@@ -114,7 +113,7 @@
            loop: false,
            prerender: true,
            autoplay: false,
-           path: 'bodymovin/data.json',
+           path: 'bodymovin/whale2/whale2.json',
            rendererSettings: {preserveAspectRatio: 'none'},
            name: 'anim1'  //only works for svg render
        };
@@ -207,41 +206,109 @@
            console.log('total duration:' + totalDuration);
 
 
-      function attachEvents(contentid) {
-          if (contentid.addEventListener) {
-              contentid.addEventListener("mousewheel", MouseWheelHandler, false);
-              contentid.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
-          } else {
-              contentid.attachEvent("onmousewheel", MouseWheelHandler);
-          }
+
+
+      function attachEvents(contentid)
+      {
+          // desktop scroll
+          $( contentid ).bind( 'mousewheel DOMMouseScroll', function ( e ) {
+              var e = window.event || e;
+              //var e0 = e.originalEvent,
+                 // delta = e0.wheelDelta || -e0.detail;
+                     delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+                      if (delta < 0) {
+                          if (val < totalDuration) {
+                              val += (Math.abs(delta)) * speed;  //speed here is mousewheel sensitivity multiplier
+                          }
+                      } else {
+                          if (val > 0) {
+                              val -= (Math.abs(delta)) * speed;
+                          }
+                      }
+                      anim.goToAndStop(val * 4);  // another sensitivity factor
+
+              //this.scrollTop += delta * -1;
+
+              e.preventDefault();
+          });
+
+          var lastY;
+          var currentY;
+
+    //reset touch position on touchstart
+          $( contentid ).bind('touchstart', function (e){
+              var currentY = e.originalEvent.touches[0].clientY;
+              lastY = currentY;
+              e.preventDefault();
+          });
+
+// get movement and scroll the same way
+          $( contentid ).bind('touchmove', function (e){
+              var currentY = e.originalEvent.touches[0].clientY;
+              delta = currentY - lastY;
+
+              //this.scrollTop += delta * -1;
+              lastY = currentY;
+              //MouseWheelHandler(delta * -1)
+              delta = delta *-1;
+              if (delta < 0) {
+                  if (val < totalDuration) {
+                      val += (Math.abs(delta));
+                  }
+              } else {
+                  if (val > 0) {
+                      val -= (Math.abs(delta));
+                  }
+              }
+              anim.goToAndStop(val * 2);  //sensitivity factor
+              e.preventDefault();
+          });
+
+
+
+
       }
 
       function detachEvents(contentid) {
-          if (contentid.addEventListener) {
-              contentid.removeEventListener("mousewheel", MouseWheelHandler, false);
-              contentid.removeEventListener("DOMMouseScroll", MouseWheelHandler, false);
-          } else {
-              contentid.detachEvent("onmousewheel", MouseWheelHandler);
-          }
+          $( contentid ).unbind( 'mousewheel DOMMouseScroll touchstart touchmove');
+
       }
 
 
+   /*
+      function MouseWheelHandler(e) {
+          var e = window.event || e;
+          var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+
+          if (delta < 0) {
+              if (val < totalDuration) {
+                  val += (Math.abs(delta)) * speed;
+              }
+          } else {
+              if (val > 0) {
+                  val -= (Math.abs(delta)) * speed;
+              }
+          }
+          anim.goToAndStop(val * 4);  //sensitivity factor
+      }
+      */
 
 
-           function MouseWheelHandler(e) {
-               var e = window.event || e;
-               var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+           function MouseWheelHandler(delta) {
+
+             //  var delta = e.deltaY;
                if (delta < 0) {
                    if (val < totalDuration) {
-                       val += (Math.abs(delta)) * speed;
+                       val += (Math.abs(delta));
                    }
                } else {
                    if (val > 0) {
-                       val -= (Math.abs(delta)) * speed;
+                       val -= (Math.abs(delta));
                    }
                }
-               anim.goToAndStop(val * 4);  //sensitivity factor
+               anim.goToAndStop(val);  //sensitivity factor
            }
+
        }
        animLoaded();
 
