@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+
+    <script src="bodymovin/bodymovin.js"></script>
+    <script src="lib/noframework.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+
+        .stop-scrolling {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #scrollOn {
+            opacity: 0;
+            transition: all 1s linear;
+            font-size: 30px;
+            top: 200px;
+            position: absolute;
+            left: 21vw;
+            color: white;
+            font-weight: bold;
+            z-index: 100;
+        }
+
+        #scrollOn.show {
+         opacity: 1;
+        }
+
+        #thing1 {
+            margin:0px auto 0 auto;
+            height: auto;
+            width: 50vw;
+            background-color: #000000;
+        }
+
+        .imgContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 350px;
+        }
+
+        #img1, #img2 {
+            height: 320px;
+            width: 450px;
+            transition: all 0.7s linear;
+            opacity: 1;
+            position: absolute;
+        }
+
+       #img1.hide, #img2.hide {
+            opacity: 0;
+        }
+
+        .thingText {
+            font-size:2em;
+            color: #ffffff;
+            padding:20px;
+        }
+        #thing2 {
+            position: relative;
+            height: 100vh;
+            margin:0px auto 0 auto;
+            width: 50vw;
+            background-color: blue;
+        }
+        #thing3 {
+            height: 100vh;
+            margin:0px auto 0 auto;
+            width: 50vw;
+            background-color: green;
+        }
+
+
+        .bodymovin  {
+            width:50vw;
+            height:80%;
+            top: 10vh;
+            position:relative;
+        }
+
+    </style>
+
+
+
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="container">
+<div id="thing1"><p class="thingText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit dolor sit amet ultricies rutrum. Proin semper magna posuere, viverra augue nec, congue nibh. Nullam ut semper quam. Donec mattis ut sapien non bibendum. Nulla eleifend mauris vel mauris rhoncus tempor. Curabitur semper mauris mi, a dapibus ligula aliquam non. Maecenas lacus ante, accumsan id porttitor vel, pretium a enim. Etiam consectetur ultricies libero, id pulvinar tortor posuere nec. Nulla pharetra eget leo quis suscipit. Quisque accumsan erat justo, a ultrices nunc pharetra et. Mauris quis euismod odio, sed tempor felis. Vivamus vel quam eget libero posuere tincidunt quis quis lectus.</p>
+   <div class="imgContainer">
+    <img id="img1" src="img/cq5.jpeg" />
+    <img id="img2" class="hide" src="img/cq52.jpeg" />
+       </div>
+    <p class="thingText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit dolor sit amet ultricies rutrum. Proin semper magna posuere, viverra augue nec, congue nibh. Nullam ut semper quam. Donec mattis ut sapien non bibendum. Nulla eleifend mauris vel mauris rhoncus tempor. Curabitur semper mauris mi, a dapibus ligula aliquam non. Maecenas lacus ante, accumsan id porttitor vel, pretium a enim. Etiam consectetur ultricies libero, id pulvinar tortor posuere nec. Nulla pharetra eget leo quis suscipit. Quisque accumsan erat justo, a ultrices nunc pharetra et. Mauris quis euismod odio, sed tempor felis. Vivamus vel quam eget libero posuere tincidunt quis quis lectus.</p>
+
+
+</div>
+<div id="thing2"><p id="scrollOn">Scroll On</p><div id="bodymovin2" class="bodymovin"></div></div>
+<div  id="thing3"><div id="bodymovin3" class="bodymovin"></div></div>
+</div>
+
+
+<script src="js/waypoint1.js"></script>
+
+</body>
+</html>

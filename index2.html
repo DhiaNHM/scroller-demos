@@ -110,7 +110,7 @@
        var anim1Data = {
            wrapper: document.getElementById('bodymovin1'),
            animType: 'html',
-           loop: false,
+           loop: true,
            prerender: true,
            autoplay: false,
            path: 'bodymovin/whale2/whale2.json',
@@ -225,7 +225,8 @@
                               val -= (Math.abs(delta)) * speed;
                           }
                       }
-                      anim.goToAndStop(val * 4);  // another sensitivity factor
+                      //anim.goToAndStop(val * 4);  // another sensitivity factor
+                          anim.playSegments([940,1450], true);
 
               //this.scrollTop += delta * -1;
 

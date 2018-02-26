@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>The Dive - fullPage prototype</title>
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<style>
+
+
+
+		#header{
+			top:0px;
+			position:fixed;
+			height: 50px;
+			display:block;
+			width: 100%;
+			background: #333;
+			z-index:9;
+			text-align:center;
+			color: #f2f2f2;
+			padding: 20px 0 0 0;
+			font-size: 25px;
+		}
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	.intro {
+		position: absolute;
+		top:100px;
+		width:100%;
+	}
+	.intro h1{
+		font-size: 2.5em;
+		font-family: arial,helvetica;
+		color: #000000;
+		margin:10px 0;
+	}
+	.intro p {
+	    font-size: 3.5em;
+		color: #000000;
+		font-weight:bold;
+	}
+
+	.caption {
+		width: 80%;
+		margin: 0 10% 0 10%;
+		text-align: left;
+		color: #ffffff;
+		font-size: 1.2em;
+		position:absolute;
+		bottom:100px;
+	}
+
+	.caption h1 {
+		font-size: 3em;
+		color: white;
+		margin: 0 0 20px 0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		background-size: contain;
+		background-color: #0b233f;
+		background-repeat: no-repeat;
+		background-position: center 50px;
+
+	}
+	.slide{
+		background-size: contain;
+	}
+
+	#section0{
+		background-image:  url(img/stage1.jpg);
+	}
+	#section1{
+		background-image: url(img/stage1-2.jpg);
+	}
+	#section2{
+		background-image: url(img/stage1-3.jpg);
+	}
+	#section3{
+		background-image: url(img/stage2.jpg);
+	}
+	#section4{
+		background-image: url(img/stage2-1.jpg);
+	}
+	#section5{
+		background-image: url(img/stage2-2.jpg);
+	}
+
+	#bodymovin5 {
+		margin: auto;
+		top: 50px;
+		width: 80%;
+		height: 40%;
+	}
+	#bodymovin5 div {
+		position: absolute !important;
+		top: 300px !important;
+		left: -968px !important;
+		transform: none !important;
+	}
+
+	#console {
+		height: 100px;
+		color: white;
+		font-size: 2em;
+		z-index: 100;
+		position:absolute;
+		margin-left: 100px;
+
+	}
+
+	/* overriding bullet nav css in jquery.fullPAge.css */
+	#fp-nav ul li, .fp-slidesNav ul li {
+		margin: 25px;
+		height: 20px;
+	}
+
+
+	#fp-nav ul li a span, .fp-slidesNav ul li a span {
+		background: #ffffff;
+		height: 10px;
+		width: 10px;
+		margin: -5px 0 0 -5px;
+	  }
+
+	#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span,
+	#fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span
+	{
+		height: 24px;
+		width: 24px;
+		margin: -12px 0 0 -12px;
+
+	}
+
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="libs/scrolloverflow.js"></script>
+
+	<script type="text/javascript" src="libs/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	<script src="../bodymovin/bodymovin.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				sectionsColor: ['#0b233f', '#0b233f', '#0b233f'],
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: [],
+				afterLoad: function(anchorLink, index){
+					console.log("after Load  " + index);
+					//$('#callbacksDiv').append('<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>');
+					//deleteLog = true;
+					console.log('===============');
+					console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index );
+					if(index === 6)
+					{
+						anim1.playSegments([900,1450], true);
+
+					}
+				},
+				onLeave: function(index, nextIndex, direction){
+					//if(deleteLog){
+						//$('#callbacksDiv').html('');
+					//}
+					//$('#callbacksDiv').append('<p>onLeave - index:' + index + ' nextIndex:' + nextIndex + ' direction:' + direction + '</p>')
+					console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " +  direction);
+					if(index === 6)
+					{
+						anim1.stop();
+
+					}
+				}
+			});
+
+
+			//bodymovin stuff
+			var anim1Data = {
+				wrapper: document.getElementById('bodymovin5'),
+				animType: 'html',
+				loop: true,
+				prerender: true,
+				autoplay: false,
+				path: '../bodymovin/whale2/whale2.json',
+				rendererSettings: {preserveAspectRatio: 'none'},
+				name: 'anim1'  //only works for svg render
+			};
+
+
+			var anim1 = bodymovin.loadAnimation(anim1Data);
+			container1 = document.getElementById('bodymovin5');
+			//contentid1 = document.getElementById('thing1');
+
+			anim1.addEventListener('enterFrame',enterframe);
+			function enterframe() {
+				console.log('In Frame');
+				$('#console').html(anim1.name + ' : ' + anim1.currentFrame + "/" + anim1.totalFrames);
+			}
+			var val = 0,
+					totalDuration = anim1.totalFrames / anim1.frameRate * 1000;
+			console.log('total duration:' + totalDuration);
+
+
+
+
+		});
+
+
+
+	</script>
+
+</head>
+<body>
+<div id="header">Header</div>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<h1>Stage 1</h1>
+			<p>Get ready to dive</p>
+		</div>
+		 <div class="caption">
+				<p>When scientists put tags on beaked whales to record their movements they were amazed to find that these whales regularly dive to depths
+				of more than 1,500 metres to feed. Fantastic adaptations enable them to survive – ride along with a beaked whale to find out how they do it.</p>
+		 </div>
+	</div>
+
+	<div class="section" id="section1">
+			<div class="intro">
+				<h1>Stage 1</h1>
+				<p>Breathe in</p>
+			</div>
+		<div class="caption">
+		<p>At the surface, beaked whales breathe out stale air through their blowholes and breathe in fresh air to take in the oxygen they need to survive a long, deep dive.</p>
+		</div>
+		</div>
+
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Stage 1</h1>
+			<p>Dive preparation</p>
+		</div>
+		<div class="caption">
+			<p>At the surface, beaked whales breathe out stale air through their blowholes and breathe in fresh air to take in the oxygen they need to survive a long, deep dive.</p>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<h1>Stage 2</h1>
+			<p>Going down</p>
+		</div>
+		<div class="caption">
+			<h1>Get ready to dive</h1>
+			<p>The full lungs of beaked whales make them float. They need to use a lot of energy to overcome this buoyancy in order to swim down.</p>
+		</div>
+	</div>
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>Stage 2</h1>
+			<p>Going down</p>
+		</div>
+	</div>
+	<div class="section" id="section5">
+		<div class="intro">
+			<h1>Stage 1</h1>
+			<p>Going down</p>
+		</div>
+		<div id="console"></div>
+		<div id="bodymovin5"></div>
+		<div class="caption">
+			<p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
