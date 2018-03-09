@@ -36,14 +36,27 @@
                 navigationPosition: 'right',
                 navigationTooltips: [],
                 afterLoad: function (anchorLink, index) {
+                    $('#introPanel').toggleClass('hide');
                     console.log("after Load  " + index);
                     //$('#callbacksDiv').append('<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>');
                     //deleteLog = true;
                     console.log('===============');
                     console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index);
 
+
                 },
                 onLeave: function (index, nextIndex, direction) {
+                    $('#introPanel').toggleClass('hide');
+
+                    var title = $('.section').eq(nextIndex-1).data('section-title');
+                    var caption = $('.section').eq(nextIndex-1).data('section-caption');
+
+
+                    setTimeout(function() {
+                        $('#introPanel h1').html(title);
+                        $('#introPanel p').html(caption);
+                    }, 300);
+
                     //if(deleteLog){
                     //$('#callbacksDiv').html('');
                     //}
@@ -67,86 +80,86 @@
 </div>
 
 <div id="fullpage">
-    <div class="section " id="section1a">
+    <div class="section " id="section1a" data-section-title="Stage1" data-section-caption="A Get ready to dive">
         <div class="caption">
             <p>When scientists put tags on beaked whales to record their movements they were amazed to find that these whales regularly dive to depths
                 of more than 1,500 metres to feed. Fantastic adaptations enable them to survive – ride along with a beaked whale to find out how they do it.</p>
         </div>
     </div>
 
-    <div class="section" id="section1b">
+    <div class="section" id="section1b" data-section-title="Stage1" data-section-caption="B Get ready to dive">
         <div class="caption">
             <p>At the surface, beaked whales breathe out stale air through their blowholes and breathe in fresh air to take in the oxygen they need to survive a long, deep dive.</p>
         </div>
     </div>
 
-    <div class="section" id="section2a">
+    <div class="section" id="section2a" data-section-title="Stage2" data-section-caption="A Get ready to dive">
         <div class="caption">
             <p>At the surface, beaked whales breathe out stale air through their blowholes and breathe in fresh air to take in the oxygen they need to survive a long, deep dive.</p>
         </div>
     </div>
-    <div class="section" id="section2b">
+    <div class="section" id="section2b" data-section-title="Stage2" data-section-caption="B Get ready to dive">
         <div class="caption">
             <h1>Get ready to dive</h1>
             <p>The full lungs of beaked whales make them float. They need to use a lot of energy to overcome this buoyancy in order to swim down.</p>
         </div>
     </div>
-    <div class="section" id="section2c">
+    <div class="section" id="section2c" data-section-title="Stage2" data-section-caption="C Get ready to dive">
         <div class="caption">
             <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
         </div>
     </div>
 
-    <div class="section" id="section2d">
+    <div class="section" id="section2d" data-section-title="Stage2" data-section-caption="D Get ready to dive">
         <div class="caption">
             <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
         </div>
     </div>
 
-        <div class="section" id="section2e">
+        <div class="section" id="section2e" data-section-title="Stage2" data-section-caption="E Get ready to dive">
             <div class="caption">
                 <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
             </div>
         </div>
 
-        <div class="section" id="section2f">
+        <div class="section" id="section2f" data-section-title="Stage2" data-section-caption="F Get ready to dive">
             <div class="caption">
                 <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
             </div>
         </div>
 
-        <div class="section" id="section2g">
+        <div class="section" id="section2g" data-section-title="Stage2" data-section-caption="G Get ready to dive">
             <div class="caption">
                 <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
             </div>
         </div>
 
-        <div class="section" id="section2h">
+        <div class="section" id="section2h" data-section-title="Stage2" data-section-caption="H Get ready to dive">
             <div class="caption">
                 <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
             </div>
         </div>
 
-        <div class="section" id="section3a">
+        <div class="section" id="section3a" data-section-title="Stage3" data-section-caption="A Get ready to dive">
             <div class="caption">
                 <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
             </div>
         </div>
 
-        <div class="section" id="section3b">
+        <div class="section" id="section3b" data-section-title="Stage3" data-section-caption="B Get ready to dive">
 
         </div>
 
-        <div class="section" id="section3c">
+        <div class="section" id="section3c" data-section-title="Stage3" data-section-caption="C Get ready to dive">
        
         </div>
 
-        <div class="section" id="section3e">
+        <div class="section" id="section3e" data-section-title="Stage3" data-section-caption="E Get ready to dive">
 
         </div>
 
 
-        <div class="section fp-auto-height"><div id="footer">Auto height footer</div>
+        <div class="section fp-auto-height" data-section-title="Fin"><div id="footer">Auto height footer</div>
 
         </div>
 
