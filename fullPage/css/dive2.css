@@ -49,7 +49,7 @@
     font-size: 2em;
     font-family: arial,helvetica;
     color: #000000;
-    margin: 10px 0 5px;
+    margin: 20px 0 5px;
 }
 #introPanel p {
     font-size: 3em;
@@ -131,8 +131,11 @@
 #section3b{
     background-image:  url(../img/svg/final/stage3b.svg);
 }
-#section3c{
-    background-image:  url(../img/svg/final/stage3c.svg);
+#section3c {
+    background-image: url(../img/svg/final/stage3c.svg);
+}
+#section3e{
+    background-image:  url(../img/svg/final/stage3e.svg);
 }
 
 

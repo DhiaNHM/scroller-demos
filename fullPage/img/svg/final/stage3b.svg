@@ -50,19 +50,19 @@
 		</g>
 	</g>
 	<g>
-		<rect x="505.5" y="620.2" class="st1" width="133.9" height="21.8"/>
-		<text transform="matrix(1 0 0 1 505.6085 640.4131)" class="st7 st8 st9">Snack zone</text>
+		<rect x="505.5" y="550.2" class="st1" width="133.9" height="21.8"/>
+		<text transform="matrix(1 0 0 1 505.6085 570.4131)" class="st7 st8 st9">Snack zone</text>
 	</g>
 	<g>
-		<circle class="st7" cx="579.2" cy="545" r="54.1"/>
+		<circle class="st7" cx="579.2" cy="475" r="54.1"/>
 		<g>
-			<path class="st0" d="M550.1,543.8c0,5,18.8,11.6,34.4,11.6s30.5-9.2,30.5-11.6c0-3-14.9-11.6-30.5-11.6S550.1,540.9,550.1,543.8z
+			<path class="st0" d="M550.1,473.8c0,5,18.8,11.6,34.4,11.6s30.5-9.2,30.5-11.6c0-3-14.9-11.6-30.5-11.6S550.1,470.9,550.1,473.8z
 				"/>
-			<path class="st0" d="M556.9,543.8l-12.7,9.4c-0.5,0.4-0.9,0.2-1-0.5l1.2-7.8c0.1-0.6,0.1-1.6,0-2.2l-1.2-7.8c0-0.6,0.5-0.8,1-0.5
-				L556.9,543.8"/>
+			<path class="st0" d="M556.9,473.8l-12.7,9.4c-0.5,0.4-0.9,0.2-1-0.5l1.2-7.8c0.1-0.6,0.1-1.6,0-2.2l-1.2-7.8c0-0.6,0.5-0.8,1-0.5
+				L556.9,473.8"/>
 			<g>
-				<path class="st0" d="M568.3,557.4c-0.3,0.8,0.1,1.2,0.9,1l8.7-2.7c0.8-0.2,1-1,0.6-1.7l-5.1-7.6c-0.5-0.7-1.1-0.6-1.3,0.2
-					L568.3,557.4z"/>
+				<path class="st0" d="M568.3,487.4c-0.3,0.8,0.1,1.2,0.9,1l8.7-2.7c0.8-0.2,1-1,0.6-1.7l-5.1-7.6c-0.5-0.7-1.1-0.6-1.3,0.2
+					L568.3,487.4z"/>
 			</g>
 		</g>
 	</g>
@@ -75,7 +75,7 @@
 	<g>
 		<rect x="363" y="228.1" class="st1" width="34" height="18.3"/>
 	</g>
-	<text transform="matrix(1 0 0 1 363 244.9561)" class="st10"><tspan x="0" y="0" class="st2 st3 st4">1</tspan><tspan x="8.5" y="0" class="st2 st3 st4">,1</tspan><tspan x="20.7" y="0" class="st2 st3 st4">0</tspan><tspan x="32.5" y="0" class="st2 st3 st4">0</tspan><tspan x="45.6" y="0" class="st2 st3 st4">m</tspan></text>
+	<text transform="matrix(1 0 0 1 363 244.9561)" class="st10"><tspan x="0" y="0" class="st2 st3 st4">10</tspan><tspan x="19.8" y="0" class="st2 st3 st4">0</tspan><tspan x="31.6" y="0" class="st2 st3 st4">0</tspan><tspan x="44.7" y="0" class="st2 st3 st4">m</tspan></text>
 </g>
 <g id="marker" class="st12">
 	<rect x="364" y="163" class="st13" width="428" height="512"/>
