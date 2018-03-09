@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The Dive - fullPage prototype</title>
+    <meta name="viewport" content="user-scalable=0">
+
+    <meta name="Resource-type" content="Document" />
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" type="text/css" href="css/dive2.css" />
+
+    <!--[if IE]>
+    <script type="text/javascript">
+        var console = { log: function() {} };
+    </script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+    <script type="text/javascript" src="libs/scrolloverflow.js"></script>
+
+    <script type="text/javascript" src="libs/jquery.fullpage.js"></script>
+    <script type="text/javascript" src="js/examples.js"></script>
+    <script src="../bodymovin/bodymovin.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage', '', '', 'bodymovin'],
+                sectionsColor: ['#0b233f', '#0b233f', '#0b233f'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: [],
+                afterLoad: function (anchorLink, index) {
+                    console.log("after Load  " + index);
+                    //$('#callbacksDiv').append('<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>');
+                    //deleteLog = true;
+                    console.log('===============');
+                    console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index);
+
+                },
+                onLeave: function (index, nextIndex, direction) {
+                    //if(deleteLog){
+                    //$('#callbacksDiv').html('');
+                    //}
+                    //$('#callbacksDiv').append('<p>onLeave - index:' + index + ' nextIndex:' + nextIndex + ' direction:' + direction + '</p>')
+                    console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " + direction);
+
+                }
+            });
+        });
+
+
+    </script>
+
+</head>
+<body>
+<div id="header">Header</div>
+
+<div id="introPanel">
+    <h1>Stage 1</h1>
+    <p>Get ready to dive</p>
+</div>
+
+<div id="fullpage">
+    <div class="section " id="section1a">
+        <div class="caption">
+            <p>When scientists put tags on beaked whales to record their movements they were amazed to find that these whales regularly dive to depths
+                of more than 1,500 metres to feed. Fantastic adaptations enable them to survive – ride along with a beaked whale to find out how they do it.</p>
+        </div>
+    </div>
+
+    <div class="section" id="section1b">
+        <div class="caption">
+            <p>At the surface, beaked whales breathe out stale air through their blowholes and breathe in fresh air to take in the oxygen they need to survive a long, deep dive.</p>
+        </div>
+    </div>
+
+    <div class="section" id="section2a">
+        <div class="caption">
+            <p>At the surface, beaked whales breathe out stale air through their blowholes and breathe in fresh air to take in the oxygen they need to survive a long, deep dive.</p>
+        </div>
+    </div>
+    <div class="section" id="section2b">
+        <div class="caption">
+            <h1>Get ready to dive</h1>
+            <p>The full lungs of beaked whales make them float. They need to use a lot of energy to overcome this buoyancy in order to swim down.</p>
+        </div>
+    </div>
+    <div class="section" id="section2c">
+        <div class="caption">
+            <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
+        </div>
+    </div>
+
+    <div class="section" id="section2d">
+        <div class="caption">
+            <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
+        </div>
+    </div>
+
+        <div class="section" id="section2e">
+            <div class="caption">
+                <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
+            </div>
+        </div>
+
+        <div class="section" id="section2f">
+            <div class="caption">
+                <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
+            </div>
+        </div>
+
+        <div class="section" id="section2g">
+            <div class="caption">
+                <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
+            </div>
+        </div>
+
+        <div class="section" id="section2h">
+            <div class="caption">
+                <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
+            </div>
+        </div>
+
+        <div class="section" id="section3a">
+            <div class="caption">
+                <p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
+            </div>
+        </div>
+
+        <div class="section" id="section3b">
+
+        </div>
+
+        <div class="section" id="section3c">
+       
+        </div>
+
+
+        <div class="section fp-auto-height"><div id="footer">Auto height footer</div>
+
+        </div>
+
+
+</body>
+</html>
