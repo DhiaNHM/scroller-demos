@@ -1,4 +1,12 @@
 
+body {
+    font-family: 'Elysio-Regular';
+}
+
+.section {
+    font-family: 'Elysio-Regular';
+}
+
 #header{
     top:0px;
     position:fixed;
@@ -12,7 +20,6 @@
     padding: 10px 0 0 0;
     font-size: 25px;
 }
-
 
 
 #footer {
@@ -47,9 +54,9 @@
 
 #introPanel h1{
     font-size: 2em;
-    font-family: arial,helvetica;
+    font-family: elysiolight;
     color: #000000;
-    margin: 20px 0 5px;
+    margin: 20px 0 0px;
     opacity: 1;
 }
 
@@ -57,7 +64,7 @@
     font-size: 3em;
     color: #000000;
     font-weight:bold;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     opacity: 1;
 }
 
@@ -66,7 +73,6 @@
     animation: introFade 0.7s;
     animation-iteration-count: 1;
 }
-
 
 
 @keyframes introFade {
@@ -78,8 +84,6 @@
     }
 }
 
-
-
 .caption {
     width: 100%;
     /* margin: 0 10% 0 10%; */
@@ -87,19 +91,19 @@
     color: #ffffff;
     font-size: 1.2em;
     position:absolute;
-    bottom:100px;
+    bottom:  4%;
     background-color: #0b233f;
 }
 
 .caption h1 {
-    font-size: 3em;
+    font-size: 1.2em;
     color: white;
     /* margin: 0 0 20px 0; */
 }
 
 .caption h1, p {
     padding: 0 5vw;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
 }
 
 
@@ -121,9 +125,11 @@
 
 #section1a {
     background-image:  url(../img/svg/final/stage1a.svg);
+    background-position: center 200px;
 }
 #section1b{
     background-image:  url(../img/svg/final/stage1b.svg);
+    background-position: center 200px;
 }
 #section2a{
     background-image:  url(../img/svg/final/stage2a.svg);
@@ -204,8 +210,8 @@
 
 /* overriding bullet nav css in jquery.fullPAge.css */
 #fp-nav ul li, .fp-slidesNav ul li {
-    margin: 25px;
-    height: 20px;
+    margin: 2vh;
+    height: 2.5vh;
 }
 
 
@@ -225,16 +231,50 @@
 }
 
 
-/* check website sass breakpoints! */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1025px) {
 .caption {
-    font-size: 1em;
-    left:0;
-    width:40%
-   }
+    font-size: 1.8em;
+    left: 0;
+    width: 30%;
+    background-color: unset;
+    bottom: unset;
+}
     .caption h1, .caption p {
         padding: 0 3vw;
     }
+    .section {
+        background-size: 100% 90%;
+    }
+ }
 
 
+/* detecting mobile views - options, need to check support for these... */
+
+
+@media screen and (orientation:portrait)
+  {
+    .section {
+        background-position: center 150px !important;
+    }
+    .caption {
+        font-size: 2.8em;
+    }
+    #fp-nav ul li, .fp-slidesNav ul li {
+        margin: 20px;
+        height: 25px;
+    }
 }
+
+
+
+/* NHM breakpoints
+$breakpoint--phone-small__portrait: 320px;
+$breakpoint--phone-small__landscape: 480px;
+$breakpoint--phone-wide__portrait: 360px;
+$breakpoint--phone-wide__landscape: 640px;
+$breakpoint--tablet__portrait: 768px;
+$breakpoint--tablet__landscape: 1024px;
+$breakpoint--desktop: 1025px;
+$breakpoint--desktop__max-width: 1160px;
+$breakpoint--desktop-wide: 1440px;
+*/

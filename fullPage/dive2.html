@@ -9,7 +9,7 @@
     <meta name="Resource-type" content="Document" />
 
     <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
-    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/dive2.css" />
 
     <!--[if IE]>
@@ -22,7 +22,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
     <script type="text/javascript" src="libs/scrolloverflow.js"></script>
-
     <script type="text/javascript" src="libs/jquery.fullpage.js"></script>
     <script type="text/javascript" src="js/examples.js"></script>
     <script src="../bodymovin/bodymovin.js"></script>
@@ -36,17 +35,16 @@
                 navigationPosition: 'right',
                 navigationTooltips: [],
                 afterLoad: function (anchorLink, index) {
-                    $('#introPanel').toggleClass('hide');
+                   // $('#introPanel').toggleClass('hide');
                     console.log("after Load  " + index);
                     //$('#callbacksDiv').append('<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>');
                     //deleteLog = true;
                     console.log('===============');
                     console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index);
 
-
                 },
                 onLeave: function (index, nextIndex, direction) {
-                    $('#introPanel').toggleClass('hide');
+                    $('#introPanel').addClass('hide');
 
                     var title = $('.section').eq(nextIndex-1).data('section-title');
                     var caption = $('.section').eq(nextIndex-1).data('section-caption');
@@ -55,7 +53,8 @@
                     setTimeout(function() {
                         $('#introPanel h1').html(title);
                         $('#introPanel p').html(caption);
-                    }, 300);
+                        $('#introPanel').removeClass('hide');
+                    }, 350);
 
                     //if(deleteLog){
                     //$('#callbacksDiv').html('');

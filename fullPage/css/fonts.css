@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'elysiomedium';
+    src: url('fonts/elysio/type_dynamic_-_elysio_medium-webfont.eot');
+    src: url('fonts/elysio/type_dynamic_-_elysio_medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/elysio/type_dynamic_-_elysio_medium-webfont.woff2') format('woff2'),
+    url('fonts/elysio/type_dynamic_-_elysio_medium-webfont.woff') format('woff'),
+    url('fonts/elysio/type_dynamic_-_elysio_medium-webfont.ttf') format('truetype'),
+    url('fonts/elysio/type_dynamic_-_elysio_medium-webfont.svg#elysiomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'elysiolight';
+    src: url('fonts/elysio/type_dynamic_-_elysio_light-webfont.eot');
+    src: url('fonts/elysio/type_dynamic_-_elysio_light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/elysio/type_dynamic_-_elysio_light-webfont.woff2') format('woff2'),
+    url('fonts/elysio/type_dynamic_-_elysio_light-webfont.woff') format('woff'),
+    url('fonts/elysio/type_dynamic_-_elysio_light-webfont.ttf') format('truetype'),
+    url('fonts/elysio/type_dynamic_-_elysio_light-webfont.svg#elysiolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Elysio-Regular';
+    src: url('fonts/elysio/type_dynamic_-_elysio-webfont.eot');
+    src: url('fonts/elysio/type_dynamic_-_elysio-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/elysio/type_dynamic_-_elysio-webfont.woff2') format('woff2'),
+    url('fonts/elysio/type_dynamic_-_elysio-webfont.woff') format('woff'),
+    url('fonts/elysio/type_dynamic_-_elysio-webfont.ttf') format('truetype'),
+    url('fonts/elysio/type_dynamic_-_elysio-webfont.svg#elysioregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'elysiothin';
+    src: url('fonts/elysio/type_dynamic_-_elysio_thin-webfont.eot');
+    src: url('fonts/elysio/type_dynamic_-_elysio_thin-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/elysio/type_dynamic_-_elysio_thin-webfont.woff2') format('woff2'),
+    url('fonts/elysio/type_dynamic_-_elysio_thin-webfont.woff') format('woff'),
+    url('fonts/elysio/type_dynamic_-_elysio_thin-webfont.ttf') format('truetype'),
+    url('fonts/elysio/type_dynamic_-_elysio_thin-webfont.svg#elysiothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
