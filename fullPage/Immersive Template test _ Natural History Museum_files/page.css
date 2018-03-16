@@ -1,0 +1,54 @@
+.aem-Author--hidePlaceholder .colctrl-start,
+.aem-Author--hidePlaceholder .cq-placeholder,
+.aem-Author--hidePlaceholder .new {
+    display: none;
+}
+
+/* add spacing inside of containers to be able to select them (and drop content before/after them) */
+.cq-Editable-dom--container,
+.aem-GridColumn.cq-Editable-dom--container {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.cq-placeholder,
+.new {
+    height: 2.875rem;
+}
+
+/* TODO: unify with aem-Grid-newComponent */
+.new {
+    margin: 1.25rem 0 1.5625rem 0;
+}
+
+.cq-placeholder.cq-marker-start {
+    margin: 0.625rem 0 0.3125rem 0;
+}
+
+.cq-placeholder.cq-marker-end {
+    margin: 0.3125rem 0 0.625rem 0;
+}
+
+.parsys > .cq-placeholder.cq-marker-start {
+    margin: 0;
+}
+
+ /* override old ui's rule */
+form div.section {
+    padding-bottom: 0;
+}
+
+/* to stretch the placeholder of the image component */
+img.cq-placeholder {
+    width: 100%;
+}
+
+.cq-cut {
+    opacity: 0.4    ;
+}
+
+/* style a component under the inline editor select */
+.cq-under-inlineeditor-selector {
+    min-height: 11.25rem;
+    margin: 0.9375rem 0;
+}

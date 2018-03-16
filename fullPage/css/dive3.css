@@ -1,0 +1,312 @@
+
+
+body {
+    font-family: 'Elysio-Regular';
+}
+
+.section {
+    font-family: 'Elysio-Regular';
+}
+
+#header{
+    top:0px;
+    position:fixed;
+    height: 50px;
+    display:block;
+    width: 100%;
+    background: #333;
+    z-index:9;
+    text-align:center;
+    color: #f2f2f2;
+    padding: 10px 0 0 0;
+    font-size: 25px;
+}
+
+
+
+#footer {
+    display:block;
+    width: 100%;
+    background: #333;
+    z-index:9;
+    text-align:center;
+    color: #f2f2f2;
+    font-size: 25px;
+}
+
+
+
+
+/* Style for our header texts
+* --------------------------------------- */
+
+
+
+#introPanel.hide h1, #introPanel.hide p {
+    animation: introFade 0.7s;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes introFade {
+    50% {
+        opacity: 0
+      }
+    100% {
+    opacity: 1;
+    }
+}
+
+.fp-caption {
+    width: 100%;
+    /* margin: 0 10% 0 10%; */
+    text-align: left;
+    color: #ffffff;
+    font-size: 1em;
+    position:absolute;
+    bottom:  4%;
+    background-color: #0b233f;
+}
+
+.fp-caption h1 {
+    font-size: 1.2em;
+    color: white;
+    /* margin: 0 0 20px 0; */
+}
+
+.fp-caption h1, p {
+    padding: 0 5vw !important;
+    margin: 0 0 10px 0;
+}
+
+
+/* Centered texts in each section
+* --------------------------------------- */
+
+.slide {
+    background-size: contain;
+}
+
+.fp-section {
+    background-size: 100% 80%;
+    background-color: #0b233f;
+    background-repeat: no-repeat;
+    background-position: center 150px;
+    width: 100vw !important;
+}
+
+
+#section1a {
+    background-image:  url(../img/svg/final/stage1a.svg);
+    background-position: center 200px;
+}
+#section1b{
+    background-image:  url(../img/svg/final/stage1b.svg);
+    background-position: center 200px;
+}
+#section2a{
+    background-image:  url(../img/svg/final/stage2a.svg);
+}
+#section2b{
+    background-image:  url(../img/svg/final/stage2b.svg);
+}
+#section2c{
+    background-image:  url(../img/svg/final/stage2c.svg);
+}
+#section2d{
+    background-image:  url(../img/svg/final/stage2d.svg);
+}
+#section2e{
+    background-image:  url(../img/svg/final/stage2e.svg);
+}
+#section2f{
+    background-image:  url(../img/svg/final/stage2f.svg);
+}
+#section2g{
+    background-image:  url(../img/svg/final/stage2g.svg);
+}
+#section2h{
+    background-image:  url(../img/svg/final/stage2h.svg);
+}
+#section3a{
+    background-image:  url(../img/svg/final/stage3a.svg);
+}
+#section3b{
+    background-image:  url(../img/svg/final/stage3b.svg);
+}
+#section3c {
+    background-image: url(../img/svg/final/stage3c.svg);
+}
+#section3e{
+    background-image:  url(../img/svg/final/stage3e.svg);
+}
+
+
+
+#bodymovin5 {
+    position: relative;
+    margin: auto;
+    top: 50px;
+    width: 80vw;
+    height: 80vw;
+    margin: 10% auto 10% auto;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+/* html renderer */
+#bodymovin5 div {
+    position: absolute !important;
+    top: 300px !important;
+    left: -1000px !important;
+    transform: none !important;
+}
+
+/* svg renderer
+#bodymovin5 svg {
+    position:absolute;
+    width: 100% !important;
+    height: 100% !important;
+    text-align: unset;
+    left: -55px;
+
+*/
+#console {
+    height: 100px;
+    color: white;
+    font-size: 2em;
+    z-index: 100;
+    position:absolute;
+    margin-left: 100px;
+
+}
+
+/* overriding bullet nav css in jquery.fullPAge.css */
+
+#fp-nav ul li, .fp-slidesNav ul li {
+    margin: 1vh;
+  /*  height: 2.5vh; */
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: #ffffff;
+    height: 1vh;
+    width: 1vh;
+    margin: -0.5vh 0 0 -0.5vh;
+}
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span
+{
+    height: 2vh;
+    width: 2vh;
+    margin: -1vh 0 0 -1vh;
+}
+
+
+@media screen and (min-width: 1025px) {
+.fp-caption {
+    font-size: 1.8em;
+    left: 0;
+    width: 30%;
+    background-color: unset;
+    bottom: unset;
+}
+    .fp-caption h1, .fp-caption p {
+        padding: 0 3vw !important;
+    }
+    .fp-section {
+        background-size: 100% 90%;
+    }
+
+
+
+
+    #fp-nav ul li, .fp-slidesNav ul li {
+        margin: 2vh;
+        /*  height: 2.5vh; */
+    }
+ }
+
+
+/* detecting mobile views - options, need to check support for these... */
+
+@media screen and (orientation:portrait)
+  {
+    .fp-section {
+        background-position: center center !important;
+    }
+
+    #fp-nav ul li, .fp-slidesNav ul li {
+       /*
+        margin: 20px;
+        height: 25px;
+        */
+    }
+}
+
+
+
+/** immersive template tweaks ***/
+.immersive-header {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+#introPanel   {
+    top: 60px;
+    position: fixed;
+    height: auto;
+    display: block;
+    width: 100%;
+    background: #e6e9eb;
+    z-index: 9;
+    text-align: center;
+    color: #f2f2f2;
+    padding: 0;
+}
+
+/** MOBILE FIRST, then larger size media queries...*/
+#introPanel h1{
+    font-size: 1.2em;
+    font-family: elysiolight;
+    color: #000000;
+    margin: 10px 0 0px;
+    opacity: 1;
+    padding:0;
+}
+
+#introPanel p {
+    font-size: 1.5em;
+    color: #000000;
+    font-weight:bold;
+    margin: 0 0 10px 0;
+    opacity: 1;
+}
+
+
+@media screen and (min-width: 1024px) {
+    #introPanel {
+        top: 80px;
+    }
+    #introPanel h1 {
+        font-size: 2em;
+    }
+    #introPanel p {
+        font-size: 3em;
+    }
+}
+
+
+/* NHM breakpoints
+$breakpoint--phone-small__portrait: 320px;
+$breakpoint--phone-small__landscape: 480px;
+$breakpoint--phone-wide__portrait: 360px;
+$breakpoint--phone-wide__landscape: 640px;
+$breakpoint--tablet__portrait: 768px;
+$breakpoint--tablet__landscape: 1024px;
+$breakpoint--desktop: 1025px;
+$breakpoint--desktop__max-width: 1160px;
+$breakpoint--desktop-wide: 1440px;
+*/

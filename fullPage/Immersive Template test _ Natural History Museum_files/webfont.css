@@ -1,0 +1,69 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2948088, 2015-01-06T08:38:45-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Elysio-Light by Type Dynamic
+ * URL: http://www.myfonts.com/fonts/typedynamic/elysio/light/
+ *
+ * Webfont: Elysio-Medium by Type Dynamic
+ * URL: http://www.myfonts.com/fonts/typedynamic/elysio/medium/
+ *
+ * Webfont: Elysio-Regular by Type Dynamic
+ * URL: http://www.myfonts.com/fonts/typedynamic/elysio/regular/
+ *
+ * Webfont: Elysio-Thin by Type Dynamic
+ * URL: http://www.myfonts.com/fonts/typedynamic/elysio/thin/
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2948088
+ * Licensed pageviews: 10,000,000
+ * Webfonts copyright: Copyright &#x00A9; 2013 by Type Dynamic. All rights reserved.
+ *
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2cfbf8");
+
+/* WR-1007: Removed declarations for eot, svg, ttf fonts */
+
+@font-face {
+	font-family: 'Elysio-Light';
+	src: url('webfont/css/2CFBF8_0_0.woff2') format('woff2'),
+		 url('webfont/css/2CFBF8_0_0.woff') format('woff');
+ }
+
+
+@font-face {
+	font-family: 'Elysio-Medium';
+	src: url('webfont/css/2CFBF8_1_0.woff2') format('woff2'),
+		 url('webfont/css/2CFBF8_1_0.woff') format('woff');
+ }
+
+
+@font-face {
+	font-family: 'Elysio-Regular';
+	src: url('webfont/css/2CFBF8_2_0.woff2') format('woff2'),
+		 url('webfont/css/2CFBF8_2_0.woff') format('woff');
+ }
+
+
+@font-face {
+	font-family: 'Elysio-Thin';
+	src: url('webfont/css/2CFBF8_3_0.woff2') format('woff2'),
+		 url('webfont/css/2CFBF8_3_0.woff') format('woff');
+ }
+
+ /** WR-1064 - Oceans Big Splash page **/
+ @font-face {
+	font-family: 'Chivo';
+	src: url('webfont/css/chivo-v8-latin-regular.woff2') format('woff2'),
+		 url('webfont/css/chivo-v8-latin-regular.woff') format('woff');
+ }
