@@ -98,11 +98,9 @@ body {
 
 #section1a {
     background-image:  url(../img/svg/final/stage1a.svg);
-    background-position: center 200px;
 }
 #section1b{
     background-image:  url(../img/svg/final/stage1b.svg);
-    background-position: center 200px;
 }
 #section2a{
     background-image:  url(../img/svg/final/stage2a.svg);
@@ -204,49 +202,6 @@ body {
 }
 
 
-@media screen and (min-width: 1025px) {
-.fp-caption {
-    font-size: 1.8em;
-    left: 0;
-    width: 30%;
-    background-color: unset;
-    bottom: unset;
-}
-    .fp-caption h1, .fp-caption p {
-        padding: 0 3vw !important;
-    }
-    .fp-section {
-        background-size: 100% 90%;
-    }
-
-
-
-
-    #fp-nav ul li, .fp-slidesNav ul li {
-        margin: 2vh;
-        /*  height: 2.5vh; */
-    }
- }
-
-
-/* detecting mobile views - options, need to check support for these... */
-
-@media screen and (orientation:portrait)
-  {
-    .fp-section {
-        background-position: center center !important;
-    }
-
-    #fp-nav ul li, .fp-slidesNav ul li {
-       /*
-        margin: 20px;
-        height: 25px;
-        */
-    }
-}
-
-
-
 /** immersive template tweaks ***/
 .immersive-header {
     position: fixed;
@@ -286,17 +241,60 @@ body {
 }
 
 
-@media screen and (min-width: 1024px) {
-    #introPanel {
+
+@media screen and (min-width: 1025px)
+{
+    .fp-caption
+    {
+        font-size: 1.8em;
+        left: 0;
+        width: 30%;
+        background-color: unset;
+        bottom: unset;
+    }
+    .fp-caption h1, .fp-caption p
+    {
+        padding: 0 3vw !important;
+    }
+    .fp-section
+    {
+        background-size: 100% 90%;
+    }
+    #fp-nav ul li, .fp-slidesNav ul li
+    {
+        margin: 2vh;
+        /*  height: 2.5vh; */
+    }
+    #introPanel
+    {
         top: 80px;
     }
-    #introPanel h1 {
+    #introPanel h1
+    {
         font-size: 2em;
     }
-    #introPanel p {
+    #introPanel p
+    {
         font-size: 3em;
     }
 }
+
+
+/* detecting mobile views - options, need to check support for these... */
+@media screen and (orientation:portrait)
+{
+    .fp-section {
+        background-position: center center !important;
+    }
+
+    #fp-nav ul li, .fp-slidesNav ul li {
+        /*
+         margin: 20px;
+         height: 25px;
+         */
+    }
+}
+
 
 
 /* NHM breakpoints
