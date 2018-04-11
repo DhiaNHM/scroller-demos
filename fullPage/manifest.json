@@ -1,18 +1,18 @@
 {
   "lang": "en",
   "dir": "ltr",
-  "name": "This is my awesome PWA",
-  "short_name": "myPWA",
+  "name": "The Dive - a PWA test",
+  "short_name": "The Dive",
   "icons": [
     {
-      "src": "\/img\/icons\/icon-60@2x.png",
-      "sizes": "192x192",
+      "src": "img/icons/icon-72@2x.png",
+      "sizes": "144x144",
       "type": "image\/png"
     }
   ],
   "theme_color": "#1a1a1a",
   "background_color": "#1a1a1a",
-  "start_url": "/",
+  "start_url": "Immersive%20Template%20test%20_%20Natural%20History%20Museum.html",
   "display": "standalone",
   "orientation": "natural"
 }
