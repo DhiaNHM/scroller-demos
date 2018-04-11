@@ -2,6 +2,21 @@
 <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1160 768" style="enable-background:new 0 0 1160 768;" xml:space="preserve" preserveAspectRatio="xMidYMid slice"  width="100%">
+	    <defs>
+                  <style type="text/css">
+                  	 @font-face {
+                  				font-family: 'Elysio-Regular';
+                                     src: url('type_dynamic_-_elysio-webfont.eot');
+                                     src: url('type_dynamic_-_elysio-webfont.eot?#iefix') format('embedded-opentype'),
+                                     url('type_dynamic_-_elysio-webfont.woff2') format('woff2'),
+                                     url('type_dynamic_-_elysio-webfont.woff') format('woff'),
+                                     url('type_dynamic_-_elysio-webfont.ttf') format('truetype'),
+                                     url('type_dynamic_-_elysio-webfont.svg#elysioregular') format('svg');
+                                     font-weight: normal;
+                                     font-style: normal;
+                  		        }
+                  	 </style>
+                 </defs>
 <style type="text/css">
 	.st0{fill:#0C2340;}
 	.st1{fill:none;}
@@ -11,7 +26,7 @@
 	.st5{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
 	.st6{fill:#CED3D9;}
 	.st7{fill:#F05B72;}
-	.st8{font-family:'Akkurat';}
+	.st8{font-family:'Elysio-Regular';}
 	.st9{font-size:28px;}
 	.st10{enable-background:new    ;}
 	.st11{fill:none;stroke:#F05B72;stroke-width:2;stroke-miterlimit:10;}

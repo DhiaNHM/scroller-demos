@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <!-- saved from url=(0079)http://localhost:4502/content/nhmwww/en/home/visit/immersive-template-test.html -->
-<html lang="en" class=" js rgba multiplebgs backgroundsize borderradius boxshadow opacity cssanimations cssgradients csstransforms csstransforms3d csstransitions fontface generatedcontent svg inlinesvg svgclippaths no-ie8compat" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
+<html lang="en" class=" js rgba multiplebgs backgroundsize borderradius boxshadow opacity cssanimations cssgradients csstransforms csstransforms3d csstransitions fontface generatedcontent svg inlinesvg svgclippaths no-ie8compat" style=""><!--<![endif]-->
+<head>
+	<link rel="manifest" href="manifest.json">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta class="foundation-mq-small"><meta class="foundation-mq-small-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-large"><meta class="foundation-mq-large-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xxlarge"><meta class="foundation-data-attribute-namespace">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
     <meta name="keywords" content="">
@@ -13,6 +17,30 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="js/serviceworker.js"></script>
+
+	<defs>
+		<style type="text/css">
+	     @font-face {
+			 font-family: 'Elysio-Regular';
+			 src: url('css/fonts/elysio/type_dynamic_-_elysio-webfont.eot');
+			 src: url('css/fonts/elysio/type_dynamic_-_elysio-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('css/fonts/elysio/type_dynamic_-_elysio-webfont.woff2') format('woff2'),
+			 url('css/fonts/elysio/type_dynamic_-_elysio-webfont.woff') format('woff'),
+			 url('css/fonts/elysio/type_dynamic_-_elysio-webfont.ttf') format('truetype'),
+			 url('css/fonts/elysio/type_dynamic_-_elysio-webfont.svg#elysioregular') format('svg');
+			 font-weight: normal;
+			 font-style: normal;
+		 }
+
+		 @media screen and (-webkit-min-device-pixel-ratio:0) {
+			 @font-face {
+				  font-family: 'Elysio-Regular';
+		          url('css/fonts/elysio/type_dynamic_-_elysio-webfont.svg#elysioregular') format('svg');
+		        }
+		    }
+		</style>
+	</defs>
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
 	<link rel="stylesheet" type="text/css" href="css/fonts.css" />
@@ -142,87 +170,101 @@ Preview Mode is off
 
 		<div id="introPanel">
 			<h1>Stage 1</h1>
-			<p>Get ready to dive</p>
+			<p>Getting ready to dive</p>
 		</div>
 
 		<div id="fullpage">
 
-			<div class="fp-section" id="section1a" data-section-title="Stage1" data-section-caption="A Get ready to dive">
+			<div class="fp-section" id="section1a" data-section-title="Stage1" data-section-caption="Get ready to dive">
+				<object id="svg1" class="svgObject" data="img/svg/final/stage1a.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
-					<p>When scientists put tags on beaked whales to record their movements they were amazed to find that these whales regularly dive to depths
-						of more than 1,500 metres to feed. Fantastic adaptations enable them to survive – ride along with a beaked whale to find out how they do it.</p>
+					<p>Beaked whales regularly dive more than 1,500 metres deep to feed. Fantastic adaptations enable them to survive – ride along with a whale to find out how they do it.</p>
 				</div>
 			</div>
 
-			<div class="fp-section" id="section1b" data-section-title="Stage1" data-section-caption="B Get ready to dive">
+			<div class="fp-section" id="section1b" data-section-title="Stage1" data-section-caption="Breathe in">
+				<object id="svg2" class="svgObject" data="img/svg/final/stage1b.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
 					<p>At the surface, beaked whales breathe out stale air through their blowholes and breathe in fresh air to take in the oxygen they need to survive a long, deep dive.</p>
 				</div>
 			</div>
 
-			<div class="fp-section" id="section2a" data-section-title="Stage2" data-section-caption="A Get ready to dive">
+			<div class="fp-section" id="section2a" data-section-title="Stage2" data-section-caption="Going down A">
+				<object id="svg3" class="svgObject" data="img/svg/final/stage2a.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
-					<p>At the surface, beaked whales breathe out stale air through their blowholes and breathe in fresh air to take in the oxygen they need to survive a long, deep dive.</p>
+					<h1>Save muscle oxygen</h1>
+					<p>Beaked whales store oxygen in their muscles, stowing energy for long dives even after lung collapse. Their streamlined shape helps to save muscle oxygen and makes movement efficient.</p>
 				</div>
 			</div>
-			<div class="fp-section" id="section2b" data-section-title="Stage2" data-section-caption="B Get ready to dive">
+			<div class="fp-section" id="section2b" data-section-title="Stage2" data-section-caption="Going down B">
+				<object id="svg4" class="svgObject" data="img/svg/final/stage2b.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
-					<h1>Get ready to dive</h1>
 					<p>The full lungs of beaked whales make them float. They need to use a lot of energy to overcome this buoyancy in order to swim down.</p>
 				</div>
 			</div>
-			<div class="fp-section" id="section2c" data-section-title="Stage2" data-section-caption="C Get ready to dive">
+			<div class="fp-section" id="section2c" data-section-title="Stage2" data-section-caption="Going down C">
+				<object id="svg5" class="svgObject" data="img/svg/final/stage2c.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
 					<p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
 				</div>
 			</div>
 
-			<div class="fp-section" id="section2d" data-section-title="Stage2" data-section-caption="D Get ready to dive">
+			<div class="fp-section" id="section2d" data-section-title="Stage2" data-section-caption="Going down D">
+				<object id="svg6" class="svgObject" data="img/svg/final/stage2d.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
 					<p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
 				</div>
 			</div>
 
-			<div class="fp-section" id="section2e" data-section-title="Stage2" data-section-caption="E Get ready to dive">
+			<div class="fp-section" id="section2e" data-section-title="Stage2" data-section-caption="Going down E">
+				<object id="svg7" class="svgObject" data="img/svg/final/stage2e.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
 					<p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
 				</div>
 			</div>
 
-			<div class="fp-section" id="section2f" data-section-title="Stage2" data-section-caption="F Get ready to dive">
+			<div class="fp-section" id="section2f" data-section-title="Stage2" data-section-caption="Going down F">
+				<object id="svg8" class="svgObject" data="img/svg/final/stage2f.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
 					<p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
 				</div>
 			</div>
 
-			<div class="fp-section" id="section2g" data-section-title="Stage2" data-section-caption="G Get ready to dive">
+			<div class="fp-section" id="section2g" data-section-title="Stage2" data-section-caption="Going down G">
+				<object id="svg9" class="svgObject" data="img/svg/final/stage2g.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
 					<p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
 				</div>
 			</div>
 
-			<div class="fp-section" id="section2h" data-section-title="Stage2" data-section-caption="H Get ready to dive">
+			<div class="fp-section" id="section2h" data-section-title="Stage2" data-section-caption="Going down H">
+				<object id="svg10" class="svgObject" data="img/svg/final/stage2h.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
 					<p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
 				</div>
 			</div>
 
-			<div class="fp-section" id="section3a" data-section-title="Stage3" data-section-caption="A Get ready to dive">
+			<div class="fp-section" id="section3a" data-section-title="Stage3" data-section-caption="Finding food A" >
+				<object id="svg11" class="svgObject" data="img/svg/final/stage3a.svg" type="image/svg+xml"></object>
 				<div class="fp-caption">
-					<p>By a depth of 200 metres the air inside their lungs has been squashed so much by increasing pressure that they have collapsed.</p>
+					<p>The deep ocean is too dark to spot prey. Beaked whales make echolocation 'clicks' to sense their preyby passing air through noise makers in their heads called phonic lips.</p>
 				</div>
 			</div>
 
-			<div class="fp-section" id="section3b" data-section-title="Stage3" data-section-caption="B Get ready to dive">
+			<div class="fp-section" id="section3b" data-section-title="Stage3" data-section-caption="Finding food B">
+				<object id="svg12" class="svgObject" data="img/svg/final/stage3b.svg" type="image/svg+xml"></object>
 
 			</div>
 
-			<div class="fp-section" id="section3c" data-section-title="Stage3" data-section-caption="C Get ready to dive">
-
+			<div class="fp-section" id="section3c" data-section-title="Stage3" data-section-caption="Finding food C">
+				<object id="svg13" class="svgObject" data="img/svg/final/stage3c.svg" type="image/svg+xml"></object>
 			</div>
 
-			<div class="fp-section" id="section3e" data-section-title="Stage3" data-section-caption="E Get ready to dive">
-
+			<div class="fp-section" id="section3e" data-section-title="Stage3" data-section-caption="Finding food D">
+				<object id="svg14" class="svgObject" data="img/svg/final/stage3e.svg" type="image/svg+xml"></object>
+				<div class="fp-caption">
+				<p>After diving so deep, beaked whales must choose between continuing to feed or resurfacing for air. If they use all their muscle oxygen, recovery will take much longer.</p>
+				</div>
 			</div>
 
 
@@ -292,12 +334,32 @@ Preview Mode is off
 					});
 				});
 
-
 			</script>
+
+
+
+
+
 
 
 
 <iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./Immersive Template test _ Natural History Museum_files/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div style="display: none; visibility: hidden;">
 <script>var ezt=ezt||[];(function(){var a=document.createElement("script");a.src=("https:"==document.location.protocol?"https://secure":"http://pixel")+".quantserve.com/aquant.js?a\x3dp-rjdHvqreGycPp";a.async=!0;a.type="text/javascript";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();ezt.push({qacct:"p-rjdHvqreGycPp",orderid:"",revenue:""});</script>
 <noscript></noscript>
-</div><script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","282218585463756");fbq("track","PageView");fbq("track","ViewContent");</script><noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=282218585463756&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript><div id="ads"></div></body></html>
+</div><script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","282218585463756");fbq("track","PageView");fbq("track","ViewContent");</script><noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=282218585463756&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript><div id="ads"></div>
+
+
+			<script>
+				if ('serviceWorker' in navigator) {
+					console.log("Will the service worker register?");
+					navigator.serviceWorker.register('serviceworker.js')
+							.then(function(reg){
+								console.log("Yes, it did.");
+							}).catch(function(err) {
+								console.log("No it didn't. This happened: ", err)
+							});
+				}
+			</script>
+
+
+</body></html>
